@@ -13,7 +13,7 @@ This project implements and evaluates various text classification approaches usi
 - Mean Development Accuracy: 65.18% ± 4.68%
 - Best Test Accuracy (from best dev model): 70.40%
 
-## Analysis
+## Comparisions
 The experimental results demonstrate significant variations in performance across different pooling mechanisms when using frozen BERT features. Mean pooling emerged as the most effective approach, achieving the highest development accuracy of 96.96% with remarkably low variance (±0.22%), indicating stable and reliable performance across different random initializations. The CLS token method performed comparably well, with a development accuracy of 96.16% (±0.95%), though showing slightly higher variance. Notably, while the CLS token method achieved the highest test accuracy (97.70%) on its best model, its higher standard deviation suggests less consistent performance. In contrast, max pooling significantly underperformed, with a development accuracy of only 65.18% and high variance (±4.68%), suggesting this method may not effectively capture the semantic information needed for classification. The substantial performance gap between max pooling and the other two methods indicates that averaging or using dedicated classification tokens better preserves the relevant features for text classification tasks. Based on these results, mean pooling appears to be the most robust choice for this specific classification task, offering the best balance between performance and stability.
 
 ## Finetuning BERT's layer 10 and layer 11
